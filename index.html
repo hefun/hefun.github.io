@@ -308,25 +308,14 @@
 
       
         
-          
-            <h1 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h1><h3 id="1-爬楼梯"><a href="#1-爬楼梯" class="headerlink" title="1. 爬楼梯"></a>1. 爬楼梯</h3><h5 id="题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）"><a href="#题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）" class="headerlink" title="题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）"></a>题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）</h5><p>分析：最后一步，只能从n-1级台阶或n-2级台阶起跳，并且各自只有一种跳法。所以我们得到：</p>
-<p>跳到第n级的跳法=跳到第n-1级的跳法<em>剩下的一级的跳法（1）+跳到n-2级的跳法\</em>剩下两级的跳法（1）</p>
-<p>即：f(n)=f(n-1)<em>1+f(n-2)\</em>1;</p>
-<p>注意，在还剩两级的时候，一级一级地跳会到达n-1级地状态，所以剩下两级都跳法中，不包含这种跳法。故为1，不为2.</p>
-<p>所以说，这种类型的我们是要考虑，达到最后一次跳的状态的跳法以及最后一次跳的跳法(并不一定是1)。</p>
-<p><strong>同类型的还有：矩阵覆盖</strong> </p>
-<p><strong>另附一题：Zexal的过河：</strong> </p>
-<p>Zexal打算借助河中间的石砖<strong>过到河对岸去</strong>。ZexalZexal从<strong>第一块石砖出发</strong>，接下来他可以走到第二块石砖或第三块石砖，有时候走的很不爽，甚至可以直接跨过两个石砖，到达第四块石砖，但是<strong>不能连续两次这种操作</strong>，因为这样消耗体能比较大。现在假设河中含n块石砖，且这些石砖呈直线分布，请你计算出Zexal<strong>从第一块石砖出发</strong>有多少种<strong>安全</strong>的过河方法。</p>
-<p>分析： 连续两次跨过两个石砖（操作1），Zexal的位置就会从n到n+6. 当石砖的数量小于1+6=7时，不会有连续两次的操作1。当石砖的数量大于7时，存在连续两次操作1的可能，我们排除这种可能。</p>
-<p>所以我们允许还有1步时，位置为n-1、n-2，但不能为n-3</p>
-<p>但并不是所有到达n-3的状态都舍去，如果前一步不是操作1，即还有两步时状态是n-4、n-5，还有一步时，状态是n-3的这种我们要加上，而且这种的走法分别只有一种。(n-4:1,3   n-5:2,3)</p>
-<p>所以：f(n)=f(n-1)+f(n-2)+f(n-4)+f(n-5);</p>
-<h3 id="2-兔子繁殖"><a href="#2-兔子繁殖" class="headerlink" title="2.兔子繁殖"></a>2.兔子繁殖</h3><p>*<em>题目描述： 有一只兔子，从出生后第3个月起每个月都生一只兔子，小兔子长到第三个月后每个月又生一只兔子，假如兔子都不死，问每个月的兔子总数为多少？ *</em></p>
-<p>第三个月的兔子数=第二个月的兔子数+第一个月的兔子所生的兔子数(等于第一个月的兔子数)</p>
-<p>第n个月的兔子数=上个月的兔子数+这个月所生的兔子数(等于上上个月的兔子数)</p>
-<p>即：f(n)=f(n-1)+f(n-2);</p>
-
-          
+          <h1 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h1><h3 id="1-爬楼梯"><a href="#1-爬楼梯" class="headerlink" title="1. 爬楼梯"></a>1. 爬楼梯</h3><h5 id="题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）"><a href="#题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）" class="headerlink" title="题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）"></a>题目描述：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法（先后次序不同算不同的结果）</h5>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/27/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -443,26 +432,14 @@
 
       
         
-          
-            <h2 id="建图方法总结"><a href="#建图方法总结" class="headerlink" title="建图方法总结"></a>建图方法总结</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><hr>
-<p>G[i][j] 为0表示点i到点j无边，若有边则为1或其权值。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> max_n 1000</span></span><br><span class="line"><span class="keyword">int</span> G[max_n][max_n];</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//多次使用同一个图的话，记得初始化</span></span><br><span class="line"><span class="comment">//存图(从G[0][0]开始)</span></span><br><span class="line"><span class="keyword">int</span> n,m;<span class="comment">// 顶点数、边数</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line"><span class="keyword">while</span>(m--)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;c);</span><br><span class="line">    G[u][v]=c;<span class="comment">//若为无向图，则还有G[v][u]=c</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历</span></span><br><span class="line"><span class="keyword">int</span> d[max_n];<span class="comment">//各点到源点的距离，若求最短路径，对源点置0，其他置INF</span></span><br><span class="line"><span class="keyword">int</span> s;<span class="comment">//源点</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="comment">//遍历目标顶点</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(d[i]&gt;d[s]+G[s][i])<span class="comment">//松弛操作</span></span><br><span class="line">        d[i]=d[s]+G[s][i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="邻接表（链式前向星）"><a href="#邻接表（链式前向星）" class="headerlink" title="邻接表（链式前向星）"></a>邻接表（链式前向星）</h3><hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> max_n ...</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> v,w,next;<span class="comment">//边的终点、权重、同一起点的上一条边的编号</span></span><br><span class="line">&#125;edge[max_n*max_n];</span><br><span class="line"><span class="keyword">int</span> no,n,m;</span><br><span class="line"><span class="keyword">int</span> head[max_n];<span class="comment">//head[u]是以u为起点的边中最前面一条边的序号，通过next遍历其他同起点的边</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span><span class="comment">//初始化非常重要</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    no=<span class="number">0</span>;<span class="comment">//初始化，当前边的序号设为0</span></span><br><span class="line">    <span class="built_in">memset</span>(head,<span class="number">-1</span>,<span class="keyword">sizeof</span>(head));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    edge[no].v=v;edge[no].w=w;</span><br><span class="line">    edge[no].next=head[u];head[u]=no++;</span><br><span class="line">    <span class="comment">/*在解决最大流问题时，同时要建反向边，无向图权值为w，有向图权值为0</span></span><br><span class="line"><span class="comment">    edge[no].v=u;edge[no].w=w;</span></span><br><span class="line"><span class="comment">    edge[no].next=head[v];head[v]=no++;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建图前进行初始化 init()</span></span><br><span class="line"><span class="comment">//遍历</span></span><br><span class="line"><span class="keyword">int</span> d[max_n];</span><br><span class="line"><span class="keyword">int</span> s;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=head[s];i!=<span class="number">-1</span>;i=edge[i].next)<span class="comment">//初始化后，head[...]均为-1，加边时，-1一直后移，故在遍历时-1表示终点</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> v=edge[i].to;</span><br><span class="line">    <span class="keyword">if</span>(d[v]&gt;d[s]+edge[i].w)</span><br><span class="line">        d[v]=d[s]+edge[i].w;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>补充：在解决最大流问题时，我们要在建正向边的同时紧接着建反向边，此时两者的序号一偶一奇，若正向边的序号为i，则反向边的序号为i^1.</p>
-<h3 id="vector实现邻接表"><a href="#vector实现邻接表" class="headerlink" title="vector实现邻接表"></a>vector实现邻接表</h3><hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> max_n ...</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span> <span class="keyword">int</span> to,cost;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt; G[max_n];</span><br><span class="line"><span class="comment">//vector&lt;pair&lt;int,int&gt; &gt;G[max_n];</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建图</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;w);</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> <span class="title">e</span>;</span></span><br><span class="line">e.to=v;e.cost=w;</span><br><span class="line">G[u].push_back(e);</span><br><span class="line"><span class="comment">//G[u].push_back(&#123;v,w&#125;); 对应上面pair</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> <span class="title">e</span>；</span></span><br><span class="line"><span class="class"><span class="title">for</span>(<span class="title">int</span> <span class="title">i</span>=0;</span>i&lt;n;i++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;G[i].<span class="built_in">size</span>();j++)</span><br><span class="line">    &#123;</span><br><span class="line">        e=G[i][j];</span><br><span class="line">        <span class="keyword">if</span>(d[e.to]&gt;d[i]+e.cost)</span><br><span class="line">            d[e.to]=d[i]+e.cost;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-          
+          <h2 id="建图方法总结"><a href="#建图方法总结" class="headerlink" title="建图方法总结"></a>建图方法总结</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/27/%E5%BB%BA%E5%9B%BE%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
